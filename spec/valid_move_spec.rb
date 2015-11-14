@@ -5,13 +5,13 @@ describe './lib/valid_move.rb' do
 
   it 'returns true for a valid position on an empty board' do
     board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-    position = "1"
+    position = "4"
     expect(valid_move?(board, position)).to be_truthy
   end
 
   it 'returns nil or false for an occupied position' do
-    board = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
-    position = "5"
+    board = [" ", " ", " ", " ", "X", " ", "X", " ", " "]
+    position = "7"
     
     expect(valid_move?(board, position)).to be_falsey
   end
