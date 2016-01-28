@@ -1,4 +1,4 @@
-# code your #valid_move? method here
-
-
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def valid_move?(board, position)
+  position = position.to_i
+  position>=1 && position<=9 && board[position-1].to_s.strip == ""
+end
